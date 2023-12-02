@@ -8,7 +8,7 @@ import img5 from "../assets/asset 19.png";
 export default function Hero() {
   return (
     <div
-      className="h-screen w-[80%] mx-auto flex items-center justify-center flex-col pt-[80px]"
+      className="h-screen w-[80%] mx-auto flex items-center justify-center flex-col pt-[160px]"
       id="heroSection"
     >
       <div className="">
@@ -16,18 +16,18 @@ export default function Hero() {
           An another way to manage time
         </p>
       </div>
-      <div className="flex flex-col gap-10 items-center justify-center">
-        <div className="leading-[0.95] text-[80px] w-[60%] text-center font-semibold">
+      <div className="flex flex-col gap-10 items-center justify-center mt-8">
+        <div className="leading-[0.95] text-[40px] sm:text-[60px] lg:text-[80px] md:w-[80%] text-center font-semibold">
           <h1 className="">Your New Favorite calender🗓️app</h1>
         </div>
-        <div className=" text-[#6b6b78] w-[45%] text-center">
+        <div className=" text-[#6b6b78] md:w-[60%] text-center">
           <p className="text-[18px]">
             Here you should explain how cool your app is. Remember,focus on the
             benefits for your users, not on the features.
           </p>
         </div>
         <div className="text-center">
-          <button className="bg-[#2e2e2e] text-[#fefefe] rounded-xl px-[32px] py-[16px] transition-transform duration-300 ease-in-out hover:scale-110 shadow-md">
+          <button className="bg-[#2e2e2e] text-[#fefefe] rounded-xl text-xs sm:text-sm md:text-lg  px-[24px] py-[12px] lg:px-[32px] lg:py-[16px] transition-transform duration-300 ease-in-out hover:scale-110 shadow-md">
             Get started, it's free
           </button>
           <p className="text-[#6b6b78] text-[12px] mt-2">
@@ -37,7 +37,7 @@ export default function Hero() {
         <div className="flex gap-2">
         <div className="flex">
           {[img1, img2, img3, img4, img5].map((img, index) => (
-            <img key={index} src={img} className={`border-[3px] border-white rounded-full ${index > 0 ? '-ml-4' : ''}`} alt="" />
+            <img key={index} src={img} className={`border-[3px] w-[40px] border-white rounded-full ${index > 0 ? '-ml-4' : ''}`} alt="" />
           ))}
         </div>
 
@@ -60,7 +60,7 @@ export default function Hero() {
               </svg>
               <p class="text-base font-semibold leading-4">5.0</p>
             </div>
-            <p>From 200+ happy users</p>
+            <p className="text-[10px] sm:text-[16px]">From 200+ happy users</p>
           </div>
         </div>
       </div>

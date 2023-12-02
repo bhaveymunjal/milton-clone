@@ -2,7 +2,7 @@ import React from "react";
 import img from "../assets/asset 17.png";
 export default function ReviewCard() {
   return (
-    <div className=" xl:w-[500px] lg:min-w-[400px] min-w-[300px] bg-white border p-4 rounded-2xl">
+    <div className=" xl:w-[500px] w-[400px] bg-white border p-4 rounded-2xl">
       <div className="flex justify-between">
         <div className="flex items-center gap-1">
           <img src={img} alt="" />

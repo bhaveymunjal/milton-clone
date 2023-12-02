@@ -34,6 +34,7 @@ const FaqAccordion = () => {
   const [rotations, setRotations] = useState(Array(faqData.length).fill(90));
 
   const toggleAccordion = (index) => {
+    handleClick(index);
     setOpenIndices((prevOpenIndices) => {
       if (prevOpenIndices.includes(index)) {
         return prevOpenIndices.filter((i) => i !== index);
@@ -52,12 +53,12 @@ const FaqAccordion = () => {
   };
 
   return (
-    <div className="w-[80%] mx-auto mt-8" id="faqSection">
+    <div  id="faqSection" className="w-[80%] mx-auto flex flex-col items-center gap-y-12">
       <ComponentHeader
         header="Relevant stuff, bla bla 📣"
         title="Frequently asked questions "
       />
-      <div className="w-[80%] mx-auto pt-16">
+      <div className="w-full md:w-[80%] mx-auto ">
         <ul>
           {faqData.map((faq, index) => (
             <li key={index} className="mb-8 bg-[#f1f2f4] px-6 py-4 rounded-xl">
@@ -65,11 +66,8 @@ const FaqAccordion = () => {
                 className="flex justify-between items-center cursor-pointer"
                 onClick={() => toggleAccordion(index)}
               >
-                <span className="text-lg font-semibold">{faq.question}</span>
-                <div
-                  className="bg-[#90909e] opacity-40   rounded-full flex w-[30px] h-[30px] justify-center items-center relative cursor-pointer"
-                  onClick={() => handleClick(index)}
-                >
+                <span className=" text-xs sm:text-sm md:text-lg font-semibold">{faq.question}</span>
+                <div className="bg-[#90909e] opacity-40 rounded-full flex w-[30px] h-[30px] justify-center items-center relative cursor-pointer">
                   <div
                     className={`w-[16px] h-[2px] rounded-lg bg-black absolute top-auto bottom-auto left-[7px] right-0`}
                     style={{
@@ -81,7 +79,7 @@ const FaqAccordion = () => {
                 </div>
               </div>
               {openIndices.includes(index) && (
-                <div className="pt-2 pb-4 text-[16px]">
+                <div className="pt-2 pb-4 text-xs sm:text-sm md:text-lg">
                   <p className="text-[#6b6b78]">{faq.answer}</p>
                 </div>
               )}
