@@ -1,13 +1,50 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/* @keyframes spin-slow {
+    0% {
+        transform: translateZ(0);
+    }
+    
+    100% {
+        transform: translate3d(-50%,0,0);
+    }
+  } */
+  
+  /* .animate-spin-slow {
+    animation: spin-slow 16s linear infinite;
+  } */
+  
+  .custom-animation {
+    animation: spin-slow 44s linear infinite;
+  }
+  
+  .custom-animation:hover {
+    animation-play-state: paused;
+  }
+  .custom-animation1 {
+    animation: spin-slow 49s linear infinite;
+  }
+  
+  .custom-animation1:hover {
+    animation-play-state: paused;
+  }
+  .custom-animation2 {
+    animation: spin-slow 54s linear infinite;
+  }
+  
+  .custom-animation2:hover {
+    animation-play-state: paused;
+  }
+  
+  @keyframes spin-slow {
+    0% {
+        transform: translate3d(-50%, 0, 0); /* Reverse the direction */
+      }
+      
+      100% {
+        transform: translate3d(0, 0, 0);
+      }
+  }
+  
