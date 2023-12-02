@@ -13,7 +13,7 @@ export default function Navbar() {
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500}
+            duration={1200}
             className="cursor-pointer mx-2 flex gap-1"
         >
           <img src={logo} alt="" />
@@ -25,7 +25,7 @@ export default function Navbar() {
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500}
+            duration={1200}
             className="cursor-pointer mx-2 hover:text-black underline-offset-2 hover:underline"
           >
             Features
@@ -35,7 +35,7 @@ export default function Navbar() {
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500}
+            duration={1200}
             className="cursor-pointer mx-2 hover:text-black underline-offset-2 hover:underline"
           >
             Testimonial
@@ -45,7 +45,7 @@ export default function Navbar() {
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500}
+            duration={1200}
             className="cursor-pointer mx-2 hover:text-black underline-offset-2 hover:underline"
           >
             Pricing
@@ -55,7 +55,7 @@ export default function Navbar() {
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500}
+            duration={1200}
             className="cursor-pointer mx-2 hover:text-black underline-offset-2 hover:underline"
           >
             FAQs{" "}

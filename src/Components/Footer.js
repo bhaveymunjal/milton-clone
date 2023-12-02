@@ -57,7 +57,7 @@ export default function Footer() {
                     spy={true}
                     smooth={true}
                     offset={-70}
-                    duration={500}
+                    duration={1200}
                     className="hover:underline hover:text-black cursor-pointer"
                   >
                     {item.text}

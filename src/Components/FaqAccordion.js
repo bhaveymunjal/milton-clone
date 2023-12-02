@@ -31,6 +31,7 @@ const FaqAccordion = () => {
   ];
 
   const [openIndices, setOpenIndices] = useState([]);
+  const [rotations, setRotations] = useState(Array(faqData.length).fill(90));
 
   const toggleAccordion = (index) => {
     setOpenIndices((prevOpenIndices) => {
@@ -39,6 +40,14 @@ const FaqAccordion = () => {
       } else {
         return [...prevOpenIndices, index];
       }
+    });
+  };
+
+  const handleClick = (index) => {
+    setRotations((prevRotations) => {
+      const newRotations = [...prevRotations];
+      newRotations[index] = newRotations[index] === 90 ? 0 : 90;
+      return newRotations;
     });
   };
 
@@ -53,15 +62,24 @@ const FaqAccordion = () => {
           {faqData.map((faq, index) => (
             <li key={index} className="mb-8 bg-[#f1f2f4] px-6 py-4 rounded-xl">
               <div
-  className="flex justify-between items-center cursor-pointer"
-  onClick={() => toggleAccordion(index)}
->
-  <span className="text-lg font-semibold">{faq.question}</span>
-  <span className="bg-[#90909e] rounded-full opacity-40 w-10 h-10 flex items-center justify-center text-[24px]">
-    {openIndices.includes(index) ? "-" : "+"}
-  </span>
-</div>
-
+                className="flex justify-between items-center cursor-pointer"
+                onClick={() => toggleAccordion(index)}
+              >
+                <span className="text-lg font-semibold">{faq.question}</span>
+                <div
+                  className="bg-[#90909e] opacity-40   rounded-full flex w-[30px] h-[30px] justify-center items-center relative cursor-pointer"
+                  onClick={() => handleClick(index)}
+                >
+                  <div
+                    className={`w-[16px] h-[2px] rounded-lg bg-black absolute top-auto bottom-auto left-[7px] right-0`}
+                    style={{
+                      transform: `rotate(${rotations[index]}deg)`,
+                      transition: "transform 0.3s ease-in-out",
+                    }}
+                  ></div>
+                  <div className="w-[16px] h-[2px] bg-black rounded-lg"></div>
+                </div>
+              </div>
               {openIndices.includes(index) && (
                 <div className="pt-2 pb-4 text-[16px]">
                   <p className="text-[#6b6b78]">{faq.answer}</p>
