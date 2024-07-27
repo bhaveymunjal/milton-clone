@@ -9,7 +9,6 @@ import Reviews from "./Components/Reviews";
 import Price from "./Components/Price";
 import LastCall from "./Components/LastCall";
 import Footer from "./Components/Footer";
-
 export default function App() {
   return (
     <>

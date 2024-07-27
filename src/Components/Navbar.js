@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="bg-[#fef9f6] font-sans text-[16px] font-bold border-b border-solid border-[#DFDEDE] fixed w-full z-10">
+    <div className="bg-[#fef9f6] font-sans text-[16px] font-bold border-b border-solid border-[#DFDEDE] sticky top-0 w-full z-10">
       <div className="w-[80%] h-[80px] mx-auto flex justify-between items-center">
         <Link
           to="heroSection"

@@ -8,8 +8,9 @@ import img5 from "../assets/asset 19.png";
 export default function Hero() {
   return (
     <div
-      className="h-screen w-[80%] mx-auto flex items-center justify-center flex-col pt-[160px]"
+      className="h-screen w-[80%] mx-auto flex items-center justify-center flex-col"
       id="heroSection"
+      style={{ height: "calc(100vh - 80px)" }}
     >
       <div className="">
         <p className="px-[16px] py-[8px] text-[16px] bg-[#f1f2f4] font-bold rounded-full">
@@ -21,7 +22,7 @@ export default function Hero() {
           <h1 className="">Your New Favorite calender🗓️app</h1>
         </div>
         <div className=" text-[#6b6b78] md:w-[60%] text-center">
-          <p className="text-[18px]">
+          <p className="text-xs sm:text-sm md:text-lg">
             Here you should explain how cool your app is. Remember,focus on the
             benefits for your users, not on the features.
           </p>
